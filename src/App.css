@@ -1,10 +1,140 @@
 .App {
   text-align: center;
+  display: flex;
 }
 
 .App-logo {
   height: 40vmin;
   pointer-events: none;
+}
+.dropdowns-container {
+  display: flex;
+  gap: 0px; /* Adjust the gap value as needed */
+}
+/* Container styles */
+.flight-results-container {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 1rem;
+  background-color: #fff;
+  box-shadow: 0 -2px 6px rgba(0, 0, 0, 0.1);
+  z-index: 999;
+  max-height: 50vh;
+  overflow-y: auto;
+}
+
+
+.flight-results {
+  background-color: #f5f5f5;
+  padding: 20px;
+}
+
+.flight-results-list {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+.flight-results-list li {
+  margin-bottom: 10px;
+}
+
+.flight-results-list p {
+  margin: 0;
+}
+
+
+.dropdown-wrapper {
+  margin: 10px;
+  padding: 0px;
+  margin-left: 50px;
+}
+
+.dropdown-wrapper label {
+  font-weight: bold;
+}
+.dropdown-container {
+  position: relative;
+  display: inline-block;
+  flex-direction: column;
+  gap: 0px; /* Adjust the gap value as needed */
+  width: 290px;
+}
+
+/* Input styles */
+input {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-size: 14px;
+}
+
+/* Dropdown styles */
+.dropdown {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  z-index: 1;
+  width: calc(100% + 20px);
+  max-height: 300px;
+  overflow-y: auto;
+  background-color: rgba(48, 216, 211, 0.377);
+  border: none;
+  border-top: none;
+  border-radius: 0 0 4px 4px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+/* Dropdown item styles */
+.dropdown li {
+  padding: 10px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  font-size: 14px;
+  color: #333;
+}
+
+.dropdown li:hover {
+  background-color: #f2f2f2;
+}
+
+.dropdown li:first-child {
+  border-top: 1px solid #ddd;
+}
+
+.dropdown li:last-child {
+  border-bottom: 1px solid #ddd;
+}
+
+/* Dropdown item highlight styles */
+.dropdown li.highlight {
+  background-color: #007bf5;
+  color: #fff;
+}
+
+.dropdown li.highlight:hover {
+  background-color: #007bf5;
+}
+
+.date{
+  padding: 20px;
+  width: 160px;
+  padding-left: 30px;
+}
+button{
+  padding: 10px;
+}
+.submit-button-wrapper {
+  display: flex;
+  align-items: center;
+  margin-top: 0px; /* Adjust the margin-top value as needed */
+  margin-left: 15px;
 }
 
 @media (prefers-reduced-motion: no-preference) {
